@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsiveness -->
+    <title>Page 3</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="box">
+        <div class="rectangle">
+            <video autoplay loop muted class="background-video">
+                <source src="136041-764371300_small.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Manifast layer -->
+    <div class="label">
+        <div class="text-wrapper">Manifast.</div>
+    </div>
+
+    <div class="random-question-frame" id="random-question-frame"></div>
+    <script src="script.js"></script>
+
+
+
+    <!-- typing form -->
+    <div class="popup" id="popup">
+        <h2>Typing....</h2>
+        <form id="popup-form">
+            <input type="text" id="message" name="message" required />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // show popup when P3 loded
+        document.addEventListener('DOMContentLoaded', function () {
+            // show popup when P3 loded
+            document.getElementById('popup').style.display = 'block';
+
+            // send a form to Page 4
+            document.getElementById('popup-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // prevent re-download Page
+                // collect msg input
+                const message = document.getElementById('message').value;
+                
+                // send msg into page4.html with query parameters
+                const nextPageUrl = 'page4.html?message=' + encodeURIComponent(message);
+                
+                // go to new page
+                window.location.href = nextPageUrl;
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsiveness -->
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- add video background -->
+    <div class="box">
+      <div class="rectangle">
+        <video autoplay loop muted class="background-video">
+          <source src="136041-764371300_small.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Manifast layer -->
+    <div class="label">
+        <div class="text-wrapper">Manifast.</div>
+      </div>
+
+      <div class="random-msg-frame" id="random-msg-frame">
+        <!-- random-msg1 -->
+      </div>
+
+    <script src="script.js"></script>
+
+    <div class="icon-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.5C5.313 1.5 1.5 5.313 1.5 10C1.5 14.687 5.313 18.5 10 18.5C14.687 18.5 18.5 14.687 18.5 10C18.5 5.313 14.687 1.5 10 1.5ZM10 20C4.486 20 0 15.514 0 10C0 4.486 4.486 0 10 0C15.514 0 20 4.486 20 10C20 15.514 15.514 20 10 20Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5586 14.2207C8.3666 14.2207 8.1736 14.1477 8.0276 13.9997C7.7356 13.7057 7.7366 13.2317 8.0296 12.9397L10.9816 9.99968L8.0296 7.06068C7.7366 6.76868 7.7356 6.29368 8.0276 5.99968C8.3196 5.70468 8.7936 5.70668 9.0876 5.99768L12.5736 9.46868C12.7146 9.60968 12.7936 9.80068 12.7936 9.99968C12.7936 10.1997 12.7146 10.3907 12.5736 10.5317L9.0876 14.0017C8.9416 14.1477 8.7496 14.2207 8.5586 14.2207Z" fill="white"/>
+      </svg>
+    </div>
+
+    <!-- popup button -->
+    <div class="icon-container2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.25 1.5C5.425 1.5 1.5 5.425 1.5 10.25C1.5 15.075 5.425 19 10.25 19C15.075 19 19 15.075 19 10.25C19 5.425 15.075 1.5 10.25 1.5ZM10.25 20.5C4.598 20.5 0 15.902 0 10.25C0 4.598 4.598 0 10.25 0C15.902 0 20.5 4.598 20.5 10.25C20.5 15.902 15.902 20.5 10.25 20.5Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.1338 8.08639C8.9568 9.08739 8.9538 11.4784 9.1308 12.4284C10.0088 12.1184 11.9108 10.8684 12.4228 10.2494C11.9128 9.64839 10.0348 8.42439 9.1338 8.08639ZM8.8278 14.0014C8.5578 14.0014 8.3018 13.9244 8.0928 13.7164C7.9318 13.5574 7.5018 13.1324 7.4998 10.3334C7.4988 7.36139 7.9458 6.91939 8.0928 6.77239C8.6158 6.25439 9.4678 6.60939 9.8308 6.76139C10.3508 6.97839 13.9998 8.84739 13.9998 10.2454C13.9998 11.5554 10.7158 13.3874 9.8768 13.7374C9.5498 13.8734 9.1768 14.0014 8.8278 14.0014Z" fill="white"/>
+        </svg>
+    </div>
+
+    <!-- popup button -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>How to Use Manifast</h2>
+            <p>1. Reflect on Your Desires: Close your eyes, breathe deeply, and visualize your dreams.</p>
+            <p>2. Share Your Manifestation</p>
+            <p>3. Receive Your Blessing</p>
+            <p>&nbsp;</p>
+            <p>Start manifesting your dreams today and watch as your life transforms in beautiful and unexpected ways. Welcome to the beginning of something wonderful!</p>
+            
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" id="close-popup">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.6025 13.1367C7.4105 13.1367 7.2185 13.0637 7.0725 12.9167C6.7795 12.6237 6.7795 12.1497 7.0725 11.8567L11.8645 7.0647C12.1575 6.7717 12.6315 6.7717 12.9245 7.0647C13.2175 7.3577 13.2175 7.8317 12.9245 8.1247L8.1325 12.9167C7.9865 13.0637 7.7945 13.1367 7.6025 13.1367Z" fill="#1E1E1E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3965 13.1396C12.2045 13.1396 12.0125 13.0666 11.8665 12.9196L7.07049 8.1226C6.77749 7.8296 6.77749 7.3556 7.07049 7.0626C7.36449 6.7696 7.83849 6.7696 8.13049 7.0626L12.9265 11.8596C13.2195 12.1526 13.2195 12.6266 12.9265 12.9196C12.7805 13.0666 12.5875 13.1396 12.3965 13.1396Z" fill="#1E1E1E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z" fill="#1E1E1E"/>
+        </svg>
+        </div>
+    </div>
+
+
+    <!-- link to P.2 -->
+    <a href="page2.html">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.5C5.313 1.5 1.5 5.313 1.5 10C1.5 14.687 5.313 18.5 10 18.5C14.687 18.5 18.5 14.687 18.5 10C18.5 5.313 14.687 1.5 10 1.5ZM10 20C4.486 20 0 15.514 0 10C0 4.486 4.486 0 10 0C15.514 0 20 4.486 20 10C20 15.514 15.514 20 10 20Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5586 14.2207C8.3666 14.2207 8.1736 14.1477 8.0276 13.9997C7.7356 13.7057 7.7366 13.2317 8.0296 12.9397L10.9816 9.99968L8.0296 7.06068C7.7366 6.76868 7.7356 6.29368 8.0276 5.99968C8.3196 5.70468 8.7936 5.70668 9.0876 5.99768L12.5736 9.46868C12.7146 9.60968 12.7936 9.80068 12.7936 9.99968C12.7936 10.1997 12.7146 10.3907 12.5736 10.5317L9.0876 14.0017C8.9416 14.1477 8.7496 14.2207 8.5586 14.2207Z" fill="white"/>
+            </svg>
+        </div>
+    </a>
+  </body>
+</html>

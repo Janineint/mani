@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 4</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Popup Style */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #D9D9D9;
+            color: #876767;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .popup h2 {
+            margin-bottom: 10px;
+        }
+
+        .popup .message {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .popup .special-message {
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        .popup button {
+            padding: 10px;
+            background-color: #929CDE;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        body {
+            background: url('136041-764371300_small.mp4') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Inter, sans-serif;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        /* May come to you with ease and joy */
+        .special-message {
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 2.25px;
+            position: absolute;
+            bottom: 47%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .random-quote {
+            color: #FFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: "Ms Madi", cursive;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 2.4px;
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="box">
+        <div class="rectangle">
+            <video autoplay loop muted class="background-video">
+                <source src="136041-764371300_small.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Label -->
+    <div class="label">
+        <div class="text-wrapper">Manifast.</div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup" style="display:none;">
+        <div class="message" id="messageFromPage3"></div>
+    </div>
+
+    <script>
+        // get query parameter from URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the message sent from Page 3
+        const message = getQueryParam('message');
+
+        // Define the array with <msg> placeholders
+        const randOutput = [
+            "Your desire for <msg> is already manifesting.",
+            "Believe in <msg>, and it will be yours.",
+            "The universe is aligning to bring you <msg>.",
+            "Your path to <msg> is clear and bright.",
+            "Embrace the journey to <msg> with an open heart.",
+        ];
+
+        // Replace <msg> with the message from Page 3
+        const updatedMessages = randOutput.map(msg => msg.replace('<msg>', message || 'your dreams'));
+
+        // Randomly select a message from updatedMessages
+        const randomMessage = updatedMessages[Math.floor(Math.random() * updatedMessages.length)];
+
+        // Show msg
+        document.getElementById('messageFromPage3').textContent = randomMessage;
+
+        // display a random quote
+        const randQuote = [
+            "Keep your face always toward the sunshine—and shadows will fall behind you. – Walt Whitman",
+            "The best way to predict the future is to create it. – Peter Drucker",
+            "You are stronger than you think, braver than you believe, and smarter than you know.",
+            "Every day may not be good, but there is something good in every day.",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "Happiness is not by chance, but by choice. – Jim Rohn",
+            "The only limit to our realization of tomorrow is our doubts of today. – Franklin D. Roosevelt",
+        ];
+
+        // select and display a random quote
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * randQuote.length);
+            const randomQuote = randQuote[randomIndex];
+
+            document.getElementById('random-quote').textContent = `"${randomQuote}"`;
+        }
+
+        window.onload = function() {
+            document.getElementById('popup').style.display = 'block';
+            displayRandomQuote();
+        }
+
+    </script>
+
+    <!--  May come to you with ease and joy  -->
+    <div class="special-message">
+        May come to you with ease and joy.
+    </div>
+
+    <!-- random quote -->
+    <div class="random-quote" id="random-quote">
+
+    </div>
+
+</body>
+</html>
